@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfonsojbf <albustos@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/13 22:24:31 by alfonsojbf        #+#    #+#             */
-/*   Updated: 2026/05/13 23:35:49 by alfonsojbf       ###   ########.fr       */
+/*   Created: 2026/05/20 00:49:21 by alfonsojbf        #+#    #+#             */
+/*   Updated: 2026/05/20 00:49:45 by alfonsojbf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-	while (*s1 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return(*(unsigned char*)s1 - *(unsigned char *)s2);
+	while (*s != '\0' && c != *s)
+		s++;
+	if (*s == c)
+		return ((char *)s);
+	return (0);
 }
+

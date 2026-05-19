@@ -10,12 +10,12 @@
 - [ ] memcpy
 - [ ] memmove
 - [x] strlcpy
-- [ ] strlcat
+- [x] strlcat
 - [x] toupper
 - [x] tolower
-- [ ] strchr
-- [ ] strrchr
-- [ ] strncmp
+- [x] strchr
+- [x] strrchr
+- [x] strncmp
 - [ ] memchr
 - [ ] memcmp
 - [ ] strnstr
