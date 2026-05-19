@@ -26,7 +26,7 @@ HEADER = tests_libft.h
 
 # Compiler
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_PATH)
+CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_PATH) -lbsd
 
 # Rules
 all: $(TEST_NAME)

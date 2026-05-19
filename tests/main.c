@@ -7,6 +7,7 @@ int main(void)
 	test_split();
 	test_atoi();
 	test_itoa();
+	test_strlcpy();
 	test_strjoin();
 	test_strcmp();
 	return (0);

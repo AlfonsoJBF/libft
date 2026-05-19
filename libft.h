@@ -33,6 +33,7 @@ int ft_atoi(const char *ptr);
 int ft_strcmp(const char *s1, const char *s2);
 char *ft_itoa(int n);
 char *ft_strjoin(const char *s1, const char *s2);
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 // General utilites
 int	ft_count_words(char *str);

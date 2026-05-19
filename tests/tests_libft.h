@@ -28,6 +28,7 @@ void test_char_classification(void);
 void test_split(void);
 void test_atoi(void);
 void test_itoa(void);
+void test_strlcpy(void);
 void test_strjoin(void);
 void test_strcmp(void);
 
