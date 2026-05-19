@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests_libft.h"
 
 static int	run_test(const char *s1, const char *s2, int test_id)
 {

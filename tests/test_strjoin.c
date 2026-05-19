@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests_libft.h"
 #include <assert.h>
 
 void test_strjoin()

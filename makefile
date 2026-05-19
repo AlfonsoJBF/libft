@@ -1,20 +1,15 @@
 # Output
 NAME = ft_lib.a
-TEST_NAME = test
 
-# FUentes
+# Fuentes
 SRCS = $(wildcard *.c)
 OBJ = $(SRCS:.c=.o)
-TEST_DIR = tests
-TEST_SRCS = $(wildcard tests/*.c)
-TEST_OBJ = $(TEST_SRCS:.c=.o)
-
 
 HEADER = libft.h
 
 # Compiler
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I. -g
+CFLAGS = -Wall -Wextra -Werror
 $(NAME) : $(OBJ)
 		ar -rcs $(NAME) $(OBJ)
 	
@@ -24,13 +19,11 @@ $(NAME) : $(OBJ)
 all: $(NAME)
 
 clean:
-	rm -f $(OBJ) $(TEST_OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME) $(TEST_NAME)
+	rm -f $(NAME)
 
 re: fclean $(NAME)
 
-test: $(NAME) $(TEST_OBJ)
-	$(CC) $(CFLAGS) $(TEST_OBJ) $(NAME) -o $(TEST_NAME)
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re

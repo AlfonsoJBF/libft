@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "tests_libft.h"
 
 void test1(void)
 {

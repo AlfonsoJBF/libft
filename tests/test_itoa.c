@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests_libft.h"
 
 static void run_test(int n, const char *expected, int test_num) {
     char *result = ft_itoa(n);

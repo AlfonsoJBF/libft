@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests_libft.h"
 
 void run_test(const char *input, int test_num) {
     int expected = atoi(input);

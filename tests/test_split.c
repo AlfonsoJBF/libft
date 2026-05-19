@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "tests_libft.h"
 
 void print_split(char **result) {
     if (!result) {
