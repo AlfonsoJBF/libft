@@ -16,8 +16,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
-#include <limits.h>
 
 //Types
 int	ft_isspace(char c);

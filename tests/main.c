@@ -2,12 +2,12 @@
 
 int main(void)
 {
-		// test1();
-		// test2();
-		test_split();
-		// test_atoi();
-		// test_itoao();
-		// test_strjoin();
-		// test_strcmp();
-		return(0);
+	test_count_words();
+	test_char_classification();
+	test_split();
+	test_atoi();
+	test_itoa();
+	test_strjoin();
+	test_strcmp();
+	return (0);
 }

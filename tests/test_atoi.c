@@ -12,52 +12,48 @@
 
 #include "tests_libft.h"
 
-void run_test(const char *input, int test_num) {
+static int run_test(const char *input, int test_num)
+{
     int expected = atoi(input);
     int result = ft_atoi(input);
+    int success = (result == expected);
 
     printf("Test %02d: [%s]\n", test_num, input);
     printf("  - Esperado: %d\n", expected);
     printf("  - Obtenido: %d\n", result);
-    
-    if (result == expected) {
-        printf("  - Resultado: ✅ PASSED\n");
-    } else {
-        printf("  - Resultado: ❌ FAILED\n");
-    }
+    if (success)
+        printf(GREEN "  - Resultado: OK\n" RESET);
+    else
+        printf(RED "  - Resultado: KO\n" RESET);
     printf("------------------------------\n");
+    return (success);
 }
 
-void test_atoi(void) {
-    printf("=== Iniciando TDD para ft_atoi ===\n\n");
+void test_atoi(void)
+{
+    int passed = 0;
+    int total = 16;
 
-    // 1. Casos Básicos
-    run_test("0", 1);
-    run_test("42", 2);
-    run_test("-42", 3);
+    printf("--- INICIANDO BATERÍA DE TESTS PARA FT_ATOI ---\n\n");
 
-    // 2. Espacios en blanco (isspace según el estándar)
-    run_test("   123", 4);
-    run_test("\t\n\v\f\r 456", 5);
+    passed += run_test("0", 1);
+    passed += run_test("42", 2);
+    passed += run_test("-42", 3);
+    passed += run_test("   123", 4);
+    passed += run_test("\t\n\v\f\r 456", 5);
+    passed += run_test("+789", 6);
+    passed += run_test("--123", 7);
+    passed += run_test("++123", 8);
+    passed += run_test("-+123", 9);
+    passed += run_test("1234ab56", 10);
+    passed += run_test("   -123456789hola", 11);
+    passed += run_test("2147483647", 12);
+    passed += run_test("-2147483648", 13);
+    passed += run_test("", 14);
+    passed += run_test("  -  ", 15);
+    passed += run_test("abc", 16);
 
-    // 3. Gestión de signos
-    run_test("+789", 6);
-    run_test("--123", 7); // Debería dar 0, solo se permite un signo
-    run_test("++123", 8); // Debería dar 0
-    run_test("-+123", 9); // Debería dar 0
-
-    // 4. Caracteres mixtos
-    run_test("1234ab56", 10); // Debe detenerse en 'a'
-    run_test("   -123456789hola", 11);
-
-    // 5. Límites de tipos de datos (Arquitectura de 32 bits vs 64 bits)
-    run_test("2147483647", 12);  // INT_MAX
-    run_test("-2147483648", 13); // INT_MIN
-
-    // 6. Cadenas vacías o sin números
-    run_test("", 14);
-    run_test("  -  ", 15);
-    run_test("abc", 16);
+    printf("\n--- RESULTADO FINAL FT_ATOI: %d/%d ---\n\n", passed, total);
 }
 
 

@@ -1,59 +1,106 @@
 #include "tests_libft.h"
 
-void print_split(char **result) {
-    if (!result) {
+static void print_split(char **result)
+{
+    if (!result)
+    {
         printf("  - Resultado: NULL\n");
         return;
     }
     printf("  - Resultado: {");
-    for (int i = 0; result[i] != NULL; i++) {
+    for (int i = 0; result[i] != NULL; i++)
+    {
         printf("\"%s\"", result[i]);
-        if (result[i + 1] != NULL) printf(", ");
+        if (result[i + 1] != NULL)
+            printf(", ");
     }
     printf("}\n");
 }
 
-void free_split(char **result) {
-    if (!result) return;
-    for (int i = 0; result[i] != NULL; i++) {
+static void free_split(char **result)
+{
+    int i;
+
+    if (!result)
+        return;
+    i = 0;
+    while (result[i] != NULL)
+    {
         free(result[i]);
+        i++;
     }
     free(result);
 }
 
-void run_test_split(char const *s, char c, int test_num) {
-    printf("Test %02d: s = \"%s\", c = '%c'\n", test_num, s, c);
-    char **result = ft_split(s, c);
-    print_split(result);
-    // Aquí podrías añadir asserts manuales para automatizar el PASS/FAIL
-    free_split(result);
-    printf("------------------------------\n");
+static int compare_split(char **result, const char *expected[])
+{
+    int i;
+
+    if (!result)
+        return (expected == NULL);
+    i = 0;
+    while (result[i] != NULL || expected[i] != NULL)
+    {
+        if (!result[i] || !expected[i])
+            return (0);
+        if (strcmp(result[i], expected[i]) != 0)
+            return (0);
+        i++;
+    }
+    return (1);
 }
 
-void test_split(void) {
-    printf("=== Iniciando TDD para ft_split ===\n\n");
+static int run_test_split(const char *s, char c, const char *expected[], int test_num)
+{
+    char **result;
+    int success;
+    int i;
 
-    // 1. Caso estándar
-    run_test_split("hola mundo", ' ', 1);
+    printf("Test %02d: s = \"%s\", c = '%c'\n", test_num, s, c);
+    result = ft_split(s, c);
+    print_split(result);
+    printf("  - Esperado: {");
+    i = 0;
+    while (expected && expected[i] != NULL)
+    {
+        printf("\"%s\"", expected[i]);
+        if (expected[i + 1] != NULL)
+            printf(", ");
+        i++;
+    }
+    printf("}\n");
+    success = compare_split(result, expected);
+    if (success)
+        printf(GREEN "  - Resultado: OK\n" RESET);
+    else
+        printf(RED "  - Resultado: KO\n" RESET);
+    printf("------------------------------\n");
+    free_split(result);
+    return (success);
+}
 
-    // 2. Delimitadores múltiples y al principio/final
-    run_test_split("   lorem   ipsum  dolor  ", ' ', 2);
+void test_split(void)
+{
+    int passed = 0;
+    int total = 8;
+    static const char *expected1[] = {"hola", "mundo", NULL};
+    static const char *expected2[] = {"lorem", "ipsum", "dolor", NULL};
+    static const char *expected3[] = {"todo-junto-sin-espacios", NULL};
+    static const char *expected4[] = {NULL};
+    static const char *expected5[] = {NULL};
+    static const char *expected6[] = {"comportamiento especial", NULL};
+    static const char *expected7[] = {NULL};
+    static const char *expected8[] = {"a", NULL};
 
-    // 3. Delimitador que no existe en la cadena
-    run_test_split("todo-junto-sin-espacios", ' ', 3);
+    printf("--- INICIANDO BATERÍA DE TESTS PARA FT_SPLIT ---\n\n");
+    passed += run_test_split("hola mundo", ' ', expected1, 1);
+    passed += run_test_split("   lorem   ipsum  dolor  ", ' ', expected2, 2);
+    passed += run_test_split("todo-junto-sin-espacios", ' ', expected3, 3);
+    passed += run_test_split("xxxxxx", 'x', expected4, 4);
+    passed += run_test_split("", 'z', expected5, 5);
+    passed += run_test_split("comportamiento especial", '\0', expected6, 6);
+    passed += run_test_split("z", 'z', expected7, 7);
+    passed += run_test_split("a", 'z', expected8, 8);
 
-    // 4. Cadena compuesta solo por delimitadores
-    run_test_split("xxxxxx", 'x', 4);
-
-    // 5. Cadena vacía
-    run_test_split("", 'z', 5);
-
-    // 6. Delimitador nulo (carácter \0)
-    run_test_split("comportamiento especial", '\0', 6);
-
-    // 7. Un solo carácter que es el delimitador
-    run_test_split("z", 'z', 7);
-
-    // 8. Un solo carácter que NO es el delimitador
-    run_test_split("a", 'z', 8);
+    printf("\n--- RESULTADO FINAL FT_SPLIT: %d/%d ---\n\n", passed, total);
 }

@@ -1,17 +1,47 @@
 #include "tests_libft.h"
 
-void test1(void)
+static int run_test(const char *input, int expected_words, int expected_len, int test_num)
 {
-	char frase[] = "   Esto         es una frase de       pruebas          ";
-	int words = ft_count_words(frase);
-	int len = ft_strlen(frase);
-	int expected = 6;
-	int expected_char = 55;
-	int color;
-	if( len == expected_char && words == expected)
-		color = 32;
+	char buffer[256];
+	int i;
+	int words;
+	int len;
+	int success;
+
+	i = 0;
+	while (input[i] != '\0' && i < (int)sizeof(buffer) - 1)
+	{
+		buffer[i] = input[i];
+		i++;
+	}
+	buffer[i] = '\0';
+
+	words = ft_count_words(buffer);
+	len = ft_strlen(buffer);
+	success = (words == expected_words && len == expected_len);
+
+	printf("Test %02d: \"%s\"\n", test_num, input);
+	printf("  - Esperado: palabras=%d, longitud=%d\n", expected_words, expected_len);
+	printf("  - Obtenido: palabras=%d, longitud=%d\n", words, len);
+	if (success)
+		printf(GREEN "  - Resultado: OK\n" RESET);
 	else
-		color = 31;
-	printf("\033[32mSe esperan %d palabras en una cadena de %d caracteres\033[0m\n", expected, expected_char);
-	printf("\033[%dmSe recibieron %d palabras y %d caracteres\033[0m\n", color, words, len);
+		printf(RED "  - Resultado: KO\n" RESET);
+	printf("------------------------------\n");
+	return (success);
+}
+
+void test_count_words(void)
+{
+	int passed = 0;
+	int total = 4;
+
+	printf("--- INICIANDO BATERÍA DE TESTS PARA FT_COUNT_WORDS ---\n\n");
+
+	passed += run_test("   Esto         es una frase de       pruebas          ", 6, 55, 1);
+	passed += run_test("hola mundo", 2, 10, 2);
+	passed += run_test("   uno   dos   tres   ", 3, 22, 3);
+	passed += run_test("", 0, 0, 4);
+
+	printf("\n--- RESULTADO FINAL FT_COUNT_WORDS: %d/%d ---\n\n", passed, total);
 }

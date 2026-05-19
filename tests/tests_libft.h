@@ -19,13 +19,16 @@
 #include <string.h>
 #include <limits.h>
 
-/* Test function prototypes */
-void	test1(void);
-void	test2(void);
-void	test_split(void);
-void	test_atoi(void);
-void	test_itoa(void);
-void	test_strjoin(void);
-void	test_strcmp(void);
+#define GREEN "\033[0;32m"
+#define RED   "\033[0;31m"
+#define RESET "\033[0m"
+
+void test_count_words(void);
+void test_char_classification(void);
+void test_split(void);
+void test_atoi(void);
+void test_itoa(void);
+void test_strjoin(void);
+void test_strcmp(void);
 
 #endif
