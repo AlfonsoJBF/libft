@@ -7,7 +7,7 @@
 - [x] strlen
 - [x] memset **Pendientes tests**
 - [x] bzero **Pendientes tests**
-- [ ] memcpy
+- [x] memcpy **Pendientes tests**
 - [ ] memmove
 - [x] strlcpy
 - [x] strlcat
