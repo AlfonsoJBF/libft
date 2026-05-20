@@ -5,8 +5,8 @@
 - [x] isascii
 - [x] isprint
 - [x] strlen
-- [ ] memset
-- [ ] bzero
+- [x] memset **Pendientes tests**
+- [x] bzero **Pendientes tests**
 - [ ] memcpy
 - [ ] memmove
 - [x] strlcpy
@@ -18,9 +18,9 @@
 - [x] strncmp
 - [ ] memchr
 - [ ] memcmp
-- [ ] strnstr
+- [x] strnstr **Pendientes tests**
 - [x] atoi
-- [ ] calloc
+- [x] calloc **Pendientes tests**
 - [ ] strdup
 
 ## II ADITIONAL FUNCTIONS
