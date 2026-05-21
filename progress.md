@@ -8,7 +8,7 @@
 - [x] memset **Pendientes tests**
 - [x] bzero **Pendientes tests**
 - [x] memcpy **Pendientes tests**
-- [ ] memmove
+- [x] memmove **Pendientes tests**
 - [x] strlcpy
 - [x] strlcat
 - [x] toupper
@@ -16,12 +16,12 @@
 - [x] strchr
 - [x] strrchr
 - [x] strncmp
-- [ ] memchr
-- [ ] memcmp
+- [x] memchr **Pendientes tests**
+- [x] memcmp **pendientes tests**
 - [x] strnstr **Pendientes tests**
 - [x] atoi
 - [x] calloc **Pendientes tests**
-- [ ] strdup
+- [x] strdup **Pendientes tests**
 
 ## II ADITIONAL FUNCTIONS
 
