@@ -1,5 +1,5 @@
 # Output
-NAME = ft_lib.a
+NAME = libft.a
 
 # Fuentes
 SRCS = $(wildcard *.c)
