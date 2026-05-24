@@ -25,20 +25,20 @@
 
 ## II ADITIONAL FUNCTIONS
 
-- [ ] ft_substr
+- [x] ft_substr
 - [x] ft_strjoin
-- [ ] ft_strtrim
+- [x] ft_strtrim
 - [x] ft_split
 - [x] ft_itoa
-- [ ] ft_strmapi
-- [ ] ft_striteri
-- [ ] ft_putchar_fd
-- [ ] ft_putstr_fd
-- [ ] ft_putendl_fd
-- [ ] ft_putnbr_fd
+- [x] ft_strmapi
+- [x] ft_striteri
+- [x] ft_putchar_fd
+- [x] ft_putstr_fd
+- [x] ft_putendl_fd
+- [x] ft_putnbr_fd
 
 ## III LINKED-LIST
-- [ ] ft_lstnew
+- [x] ft_lstnew
 - [ ] ft_lstadd_front
 - [ ] ft_lstsize
 - [ ] ft_lstlast
