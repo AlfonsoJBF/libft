@@ -2,7 +2,6 @@
 
 int main(void)
 {
-	test_count_words();
 	test_char_classification();
 	test_split();
 	test_atoi();

@@ -14,14 +14,14 @@
 
 int	ft_atoi(const char *ptr)
 {
-	int result;
-	int sign;
-	int i;
+	int	result;
+	int	sign;
+	int	i;
 
 	result = 0;
 	sign = 1;
 	i = 0;
-	while(ft_isspace(ptr[i]))
+	while (ft_isspace(ptr[i]))
 		i++;
 	if (ptr[i] == '-' || ptr[i] == '+')
 	{

@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-static int count_len(int n)
+static int	count_len(int n)
 {
-	int len;
-	unsigned int number;
-	
+	int				len;
+	unsigned int	number;
+
 	if (n == 0)
 		return (1);
 	len = 0;
@@ -24,7 +24,7 @@ static int count_len(int n)
 	{
 		len = 1;
 		number = -n;
-	} 
+	}
 	else
 		number = n;
 	while (number != 0)
@@ -35,19 +35,18 @@ static int count_len(int n)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *arr;
-	long nb;
-	int size;
+	char	*arr;
+	long	nb;
+	int		size;
 
 	nb = n;
 	size = count_len(n);
 	arr = malloc(sizeof(char) * (size + 1));
 	if (!arr)
 		return (NULL);
-
-	if(nb < 0)
+	if (nb < 0)
 	{
 		arr[0] = '-';
 		nb = -nb;
@@ -57,10 +56,9 @@ char *ft_itoa(int n)
 	arr[size] = '\0';
 	while (nb != 0)
 	{
-		arr[size - 1] =	(nb % 10) + 48;
+		arr[size - 1] = (nb % 10) + 48;
 		size--;
 		nb = nb / 10;
 	}
-
 	return (arr);
 }

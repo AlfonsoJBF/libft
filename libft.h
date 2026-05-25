@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 //Types
 int		ft_isspace(char c);
@@ -51,7 +51,6 @@ size_t	ft_strlen(const char *c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-
 // FILE DESCRIPTORS
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
@@ -63,7 +62,7 @@ int		ft_count_words(char *str);
 char	**ft_split(const char *s, char c);
 
 // LINKED LISTS
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

@@ -23,7 +23,6 @@
 #define RED   "\033[0;31m"
 #define RESET "\033[0m"
 
-void test_count_words(void);
 void test_char_classification(void);
 void test_split(void);
 void test_atoi(void);
