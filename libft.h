@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 02:21:13 by albustos          #+#    #+#             */
-/*   Updated: 2026/05/26 13:32:34 by albustos         ###   ########.fr       */
+/*   Updated: 2026/05/26 14:55:24 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 
 //Types
-int		ft_isspace(char c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -76,6 +75,6 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	ft_lstmap(t_list *lst, void (*f)(void *), void (*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

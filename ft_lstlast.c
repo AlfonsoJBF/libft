@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 00:58:12 by albustos          #+#    #+#             */
-/*   Updated: 2026/05/26 13:32:34 by albustos         ###   ########.fr       */
+/*   Updated: 2026/05/26 13:37:08 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	// t_list	*node;
-
 	if (lst == NULL)
 		return (NULL);
 	while (lst->next != NULL)
