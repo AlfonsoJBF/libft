@@ -1,4 +1,5 @@
 compile_commands.json
 libftTester/
+libft-tester/
 .o
 .a
