@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_strlcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alfonsojbf <albustos@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albustos   <albustos@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/20 00:00:00 by alfonsojbf        #+#    #+#             */
-/*   Updated: 2026/05/20 00:00:00 by alfonsojbf       ###   ########.fr       */
+/*   Created: 2026/05/20 00:00:00 by albustos          #+#    #+#             */
+/*   Updated: 2026/05/20 00:00:00 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

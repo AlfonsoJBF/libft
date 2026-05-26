@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_strjoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alfonsojbf <albustos@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/13 01:40:02 by alfonsojbf        #+#    #+#             */
-/*   Updated: 2026/05/19 00:00:00 by alfonsojbf       ###   ########.fr       */
+/*   Created: 2026/05/13 01:40:02 by albustos          #+#    #+#             */
+/*   Updated: 2026/05/26 13:32:34 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

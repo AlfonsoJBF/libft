@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnumber_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alfonsojbf <albustos@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 00:17:16 by alfonsojbf        #+#    #+#             */
-/*   Updated: 2026/05/24 00:20:14 by alfonsojbf       ###   ########.fr       */
+/*   Created: 2026/05/24 00:17:16 by albustos          #+#    #+#             */
+/*   Updated: 2026/05/26 13:32:34 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

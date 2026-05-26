@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alfonsojbf <albustos@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 01:10:33 by alfonsojbf        #+#    #+#             */
-/*   Updated: 2026/05/26 01:33:16 by alfonsojbf       ###   ########.fr       */
+/*   Created: 2026/05/26 01:10:33 by albustos          #+#    #+#             */
+/*   Updated: 2026/05/26 13:32:34 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

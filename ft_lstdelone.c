@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alfonsojbf <albustos@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 02:12:19 by alfonsojbf        #+#    #+#             */
-/*   Updated: 2026/05/26 02:14:40 by alfonsojbf       ###   ########.fr       */
+/*   Created: 2026/05/26 02:12:19 by albustos          #+#    #+#             */
+/*   Updated: 2026/05/26 13:32:34 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
