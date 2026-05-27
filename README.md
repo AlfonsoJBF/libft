@@ -1,7 +1,7 @@
 *Este proyecto ha sido creado como parte del currículo de 42 por [albustos](https://github.com/AlfonsoJBF)*
 
 <p align="center">
-  <img src="https://eu.badgr.com/public/issuers/tktrAbCnRtiXNxG1dgqKMQ" alt="42 Logo" width="150"/>
+  <img src="https://media.badges.parchment.eu/uploads/issuers/issuer_logo_3b392490-eb21-4e1a-a068-d0df9f079c8b.png" alt="42 Logo" width="150"/>
 </p>
 
 <h1 align="center">✏️ Libft — @42 Madrid</h1>
