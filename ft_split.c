@@ -35,53 +35,57 @@ static int	count_words(const char *str, char c)
 	return (count);
 }
 
-char	*dup_word(char const *s, int start, int end)
+static char	**free_array(char **arr, int i)
 {
-	int		size;
-	char	*word;
-	int		i;
-
-	size = end - start;
-	word = malloc(sizeof(char) * (size + 1));
-	i = 0;
-	if (!word)
-		return (NULL);
-	while (s[start] && i < size)
+	while (i > 0)
 	{
-		word[i] = s[start];
-		start++;
-		i++;
+		i--;
+		free(arr[i]);
 	}
-	word[i] = '\0';
-	return (word);
+	free(arr);
+	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static void	init_vars(ssize_t *start, int *counter, size_t *finish)
 {
-	char	**arr;
+	*start = -1;
+	*counter = 0;
+	*finish = 0;
+}
+
+static char	**solve_split(char **arr, char const *s, char c)
+{
 	ssize_t	start;
 	int		j;
 	size_t	finish;
 
-	if (!s)
-		return (NULL);
-	arr = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!arr)
-		return (NULL);
-	start = -1;
-	j = 0;
-	finish = 0;
+	init_vars(&start, &j, &finish);
 	while (finish <= ft_strlen(s))
 	{
 		if (s[finish] != c && start < 0)
 			start = finish;
 		else if ((s[finish] == c || finish == ft_strlen(s)) && start >= 0)
 		{
-			arr[j++] = dup_word(s, start, finish);
+			arr[j] = ft_substr(s, start, (finish - start));
+			if (!arr[j])
+				return (free_array(arr, j));
 			start = -1;
+			j++;
 		}
 		finish++;
 	}
 	arr[j] = NULL;
 	return (arr);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+
+	if (!s)
+		return (NULL);
+	arr = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!arr)
+		return (NULL);
+	return (solve_split(arr, s, c));
 }
